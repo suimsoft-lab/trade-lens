@@ -1,0 +1,230 @@
+$brand-primary: #2563eb;
+$brand-accent: #14b8a6;
+$neutral-900: #111827;
+$neutral-700: #374151;
+$neutral-500: #6b7280;
+$neutral-200: #e5e7eb;
+$neutral-50: #f8fafc;
+
+body {
+  background: $neutral-50;
+  color: $neutral-900;
+  font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  line-height: 1.7;
+}
+
+.page__content {
+  font-size: 1.02rem;
+}
+
+// ── Buttons ──────────────────────────────────────────────
+
+.btn--primary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
+
+.btn--inverse {
+  background-color: $brand-accent;
+  border-color: $brand-accent;
+}
+
+.btn--light-outline {
+  background-color: #fff;
+  border: 1px solid $neutral-200;
+  color: $neutral-700;
+}
+
+.btn--light-outline:hover {
+  border-color: $brand-primary;
+  color: $brand-primary;
+}
+
+// ── Grid Layouts ──────────────────────────────────────────
+
+.app-grid,
+.latest-grid,
+.post-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin: 1rem 0 2rem;
+}
+
+// ── Cards ─────────────────────────────────────────────────
+
+.app-card,
+.latest-card,
+.post-card {
+  background: #fff;
+  border: 1px solid $neutral-200;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(17, 24, 39, 0.04);
+}
+
+.app-card h3,
+.latest-card h3,
+.post-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.app-card p,
+.latest-card p,
+.post-card p {
+  margin-bottom: 0.45rem;
+  color: $neutral-700;
+}
+
+.app-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+// ── Meta & Badge ───────────────────────────────────────────
+
+.latest-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $neutral-500;
+  font-size: 0.88rem;
+}
+
+.category-badge {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.1);
+  color: $brand-primary;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+// ── CTA / Section Hero ────────────────────────────────────
+
+.cta-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.75rem;
+}
+
+.section-hero {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.08), rgba(20, 184, 166, 0.04));
+  border: 1px solid $neutral-200;
+  border-radius: 14px;
+  padding: 1rem 1rem 0.85rem;
+  margin: 0.5rem 0 1.2rem;
+}
+
+.section-hero h2 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.section-hero p {
+  color: $neutral-700;
+}
+
+.page-chip {
+  display: inline-block;
+  margin: 0;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: $brand-primary;
+  background: rgba(37, 99, 235, 0.12);
+}
+
+// ── Flow Steps (5단계 플로우) ──────────────────────────────
+
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+}
+
+.flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background: #fff;
+  border: 1px solid $neutral-200;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.03);
+}
+
+.flow-step strong {
+  display: block;
+  font-size: 0.95rem;
+  color: $neutral-900;
+  margin-bottom: 0.15rem;
+}
+
+.flow-step p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: $neutral-700;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: $brand-primary;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ── Code / Pre ─────────────────────────────────────────────
+
+code,
+pre,
+.highlight {
+  font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas,
+    monospace;
+}
+
+pre,
+div.highlighter-rouge {
+  border-radius: 12px;
+  border: 1px solid $neutral-200;
+}
+
+// ── Responsive ─────────────────────────────────────────────
+
+@media (min-width: 768px) {
+  .app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .latest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .post-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flow-steps .flow-step:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}

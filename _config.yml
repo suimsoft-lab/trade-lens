@@ -1,0 +1,51 @@
+title: "Trade Lens"
+description: "AI로 HS 코드를 찾는 가장 스마트한 방법 — 무역·통관 실무자를 위한 앱 소개 블로그"
+url: "https://suimsoft-lab.github.io"
+baseurl: "/trade-lens"
+lang: ko-KR
+timezone: Asia/Seoul
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+locale: "ko-KR"
+
+author:
+  name: suimsoft-lab
+  bio: "무역·통관 실무자를 위한 AI 도구를 만듭니다."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/suimsoft-lab"
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+plugins:
+  - jekyll-include-cache
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      toc: true
+      toc_sticky: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+
+atom_feed:
+  hide: true
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/suimsoft-lab"
+    - label: "개인정보처리방침"
+      icon: "fas fa-fw fa-shield-alt"
+      url: "/trade-lens/privacy-policy/"
